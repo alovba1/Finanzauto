@@ -1,0 +1,79 @@
+<div class="container">
+    <div class="card">
+       <div class="card-header">
+            <h3>Adicionar Vehiculo</h3>
+       </div>
+       <div class="card-body">
+        <form novalidate #f="ngForm" novalidate >
+   
+       
+           <div class="form-group">
+            <label for="">Marca:</label>
+          
+            <select  id="brand" name ="brand" class="form-control" [(ngModel)]=brand required>
+                <option>
+               Chevrolet
+                </option>
+                <option>
+                Renault
+                </option>
+                <option>
+                Ford
+              </option>
+              <option>
+                Kia
+              </option>
+             </select>
+           </div>
+       
+           <div class="form-group">
+            <label for="">Color:</label>
+          
+            <select  id="color" name ="color" class="form-control" [(ngModel)]=color required>
+                <option>
+               Amarillo
+                </option>
+                <option>
+                Azul
+                </option>
+                  <option>
+                Verde
+                </option>
+                <option>
+                  Rojo
+                  </option>
+             </select>
+           </div>
+       
+           <div class="form-group">
+            <label for="">Transmission:</label>
+          
+            <select  id="transmission" name ="transmission" class="form-control" [(ngModel)]=transmission required>
+                <option>
+              Automatico
+                </option>
+                <option>
+                Mecanico
+                </option>
+                
+             </select>
+           </div>
+           <div class="form-group">
+            <input  class="form-control" type="file"  (change)="onFileSelected($event)" />
+          </div>
+
+           <section>
+          
+            <div class="example-button-row">
+             
+              <button (click)="Guardar()" mat-raised-button color="primary">Guardar</button>
+              <button (click)="filterVehiculo()" mat-raised-button color="warn">BuscarVehiculo</button>
+            </div>
+          </section>
+
+       
+    </form>
+    </div>     
+    </div>
+    </div>
+

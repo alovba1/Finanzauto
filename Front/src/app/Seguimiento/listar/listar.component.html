@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="card">
+        <div class="card-header">
+            <h3>Vehiculos</h3>
+    </div>
+    <div class="card-body">
+    
+      <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Color</th>
+                <th scope="col">Transmicion</th>
+                <th scope="col">Ubicación Imagen</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let item of vehicle' class="text-center"> 
+                    <td>{{item.id}}</td>
+                    <td>{{item.brand}}</td>
+                    <td>{{item.color}}</td>
+                    <td>{{item.transmission}}</td>
+                    <td>{{item.pathimg}}</td>
+                    <td><a [routerLink]="[ '/vehiculo','edit', item.id ]">Edit</a></td>
+                    <button (click)="Delete(item)" style="margin-left: 10px; min-height: 1px;" mat-raised-button color="warn">Delete</button>
+                  </tr>
+        </table>
+
+    </div>
+
+</div>
+

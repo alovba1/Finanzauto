@@ -1,0 +1,11 @@
+<form novalidate #f="ngForm" novalidate >
+<div>
+    <label for="searchInput">Buscar por nombre:</label>
+    <input type="text" id="searchInput" [(ngModel)]="searchTerm" />
+    
+    <ul>
+      <li *ngFor="let item of filteredItems">{{ item.name }}</li>
+    </ul>
+    <button (click)="filter()" mat-raised-button color="primary">Buscar Vehiculo</button>
+  </div>
+</form>

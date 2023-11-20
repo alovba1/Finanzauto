@@ -1,0 +1,102 @@
+<div class="container">
+    <div class="card">
+       <div class="card-header">
+            <h3>Editar Vehiculo</h3>
+       </div>
+       <div class="card-body">
+        <form  #f="ngForm">
+           
+          <div class="form-group">
+            <label for="">Id:</label>
+            <input type="text" id="id" name ="id" class="form-control" [(ngModel)]=id required>
+           </div>
+           <div class="form-group">
+            <label for="">Marca:</label>
+          
+            <select  id="brand" name ="brand" class="form-control" [(ngModel)]=brand required>
+                <option>
+               Chevrolet
+                </option>
+                <option>
+                Renault
+                </option>
+                <option>
+                Ford
+              </option>
+              <option>
+                Kia
+              </option>
+             </select>
+           </div>
+       
+           <div class="form-group">
+            <label for="">Color:</label>
+          
+            <select  id="color" name ="color" class="form-control" [(ngModel)]=color required>
+                <option>
+               Amarillo
+                </option>
+                <option>
+                Azul
+                </option>
+                  <option>
+                Verde
+                </option>
+                <option>
+                  Rojo
+                  </option>
+             </select>
+           </div>
+       
+           <div class="form-group">
+            <label for="">Transmission:</label>
+          
+            <select  id="transmission" name ="transmission" class="form-control" [(ngModel)]=transmission required>
+                <option>
+              Automatico
+                </option>
+                <option>
+                Mecanico
+                </option>
+                
+             </select>
+           </div>
+           <table class="table table-hover">
+            <thead>
+              <tr>
+                <th scope="col">id</th>
+                <th scope="col">Marca</th>
+                <th scope="col">Color</th>
+                <th scope="col">Transmicion</th>
+                <th scope="col">Ubicación Imagen</th>
+              </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor='let item of vehicl' class="text-center"> 
+                    <td>{{item.id}}
+                    </td>
+                    <td>{{item.brand}}</td>
+                    <td>{{item.color}}</td>
+                    <td>{{item.transmission}}</td>
+                    <td>{{item.pathimg}}</td>
+                </tr>
+        </table>
+
+           <section>
+
+            <div>
+             
+              <button (click)="updateName()" mat-raised-button color="primary">Actualizar</button>
+            </div>
+          
+            <div class="example-button-row">
+          
+            </div>
+          </section>
+
+       
+    </form>
+    </div>     
+    </div>
+    </div>
+
